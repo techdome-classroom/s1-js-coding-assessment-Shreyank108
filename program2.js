@@ -12,7 +12,19 @@ const decodeTheRing = function (s, p) {
           dp[i][0] = dp[i - 1][0]; // '*' can match an empty sequence
       }
   }
+  for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= m; j++) {
+        if (p[i - 1] === '*') {
+            // '*' can match zero or more characters
+            dp[i][j] = dp[i - 1][j] || dp[i][j - 1];
+        } else if (p[i - 1] === '?' || p[i - 1] === s[j - 1]) {
+            // '?' matches one character or characters match
+            dp[i][j] = dp[i - 1][j - 1];
+        }
+    }
+} 
 
+ 
 
   };
   
