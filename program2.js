@@ -24,7 +24,7 @@ const decodeTheRing = function (s, p) {
     }
 } 
 
-return dp[n][m];
+return dp[n][m]; 
 
   };
   
