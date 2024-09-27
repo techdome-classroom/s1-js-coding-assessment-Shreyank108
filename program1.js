@@ -16,6 +16,8 @@ const getTotalIsles = function (grid) {
     dfs(i, j + 1); 
   }
 
+  let islandCount = 0;
+
 };
 
 module.exports = getTotalIsles;
