@@ -8,7 +8,7 @@ const getTotalIsles = function (grid) {
   const cols = grid[0].length;  
 
   const dfs=(i,j)=>{ 
-    
+    bounds or hit water
   }
 
 };
