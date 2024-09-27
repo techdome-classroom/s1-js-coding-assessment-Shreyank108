@@ -7,6 +7,13 @@ const decodeTheRing = function (s, p) {
     const dp = Array(n + 1).fill(false).map(() => Array(m + 1).fill(false));
     dp[0][0] = true;
 
+    for (let i = 1; i <= n; i++) {
+      if (p[i - 1] === '*') {
+          dp[i][0] = dp[i - 1][0]; // '*' can match an empty sequence
+      }
+  }
+
+
   };
   
   module.exports = decodeTheRing;
